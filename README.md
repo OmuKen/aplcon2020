@@ -26,6 +26,8 @@ sqlparse   0.3.1
 ##参照資料
 ・Django チュートリアル 
 URL:https://docs.djangoproject.com/ja/3.1/intro/tutorial01/
+・Qiita
+URL:https://qiita.com/gragragrao/items/373057783ba8856124f3
 
 ##進捗
 1. Djangopプロジェクト作成 (プロジェクト名 = aplcon)
