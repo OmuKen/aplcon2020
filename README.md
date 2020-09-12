@@ -18,6 +18,15 @@ sqlparse   0.3.1
 ## 設定
 1.プロジェクトパス 
     */aplcon2020/aplcon
+2.htmlで使用したい画像ファイルの置き場所
+    */apln2020/aplcon/static/images
+
+## Django HTML記述ノウハウ
+1. 画像を表示させたい場合
+>*/apln2020/aplcon/static/imagesに表示させたい画像をおく
+>htmlに下記の記述で画像を埋め込む
+    {% load static%}
+    <img src="{% static "images/表示させたい画像名"%}">
 
 ## 操作方法
 ・サーバーの軌道
