@@ -32,3 +32,8 @@ URL:https://qiita.com/gragragrao/items/373057783ba8856124f3
 ## 進捗
 1. Djangopプロジェクト作成 (プロジェクト名 = aplcon)
 2. アプリケーション作成(sアプリケーション名 = aplcon_app)
+
+## VIew概要
+1. homeのviewについて
+・apl_con直下の「templete」内のhome.html を表示する
+・apl_con直下の「vews.py」のhomeView関数が対応するビュー
