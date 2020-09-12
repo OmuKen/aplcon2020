@@ -1,4 +1,6 @@
-# aplcon2020
+<div align="center">
+<img src="./icon.png" title="ICON">
+</div>
 
 ## Member
 * OmuKen
