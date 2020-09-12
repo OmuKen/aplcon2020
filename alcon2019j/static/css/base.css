@@ -1,0 +1,198 @@
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #4E7FBF;
+}
+li {
+	float: left;
+	border-right: 1px solid #bbbbbb;
+}
+li:last-child {
+	border-right: none;
+}
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover:not(.active) {
+	background-color: #a9bce2;
+}
+.active {
+	background-color: #da3c41;
+}
+
+.wrapper{
+	min-height: 100vh;
+	position: relative;/*←相対位置*/
+}
+
+footer{
+	width: 100%;
+	background-color: #4E7FBF;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+
+	position: absolute;/*←絶対位置*/
+	bottom: 0; /*下に固定*/
+}
+
+
+.body{
+  background:#f8f8f8;
+}
+
+.background{
+  padding:50px;
+  background-color:#f8f8f8;
+}
+
+p {
+  margin:0;
+}
+
+.card_welcom{
+  display:inline-block;
+  background-color:#dbdbff;
+  margin:5px;
+	padding-bottom:10px;
+	width:60%;
+	height:450px;
+	float:left;
+  border-radius:5px;
+    -moz-box-shadow:0 2px 2px 0 rgb(248, 248, 248);
+    -webkit-box-shadow:0 2px 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:0 2px 2px 0 rgba(231, 226, 226, 0.2);
+}
+
+.title-box_welcom{
+  margin:0 auto;
+  padding-left:5px;
+  font-size:30px;
+  padding:20px 10px 10px;
+}
+
+.desc-box_welcom{
+  padding:0 10px 10px;
+	color:#ebdfdf;
+  font-size:40px
+}
+
+
+
+
+
+.card_register{
+  display:inline-block;
+  background-color:#dbdbff;
+  margin:5px;
+	padding-bottom:20px;
+	width:35%;
+  border-radius:5px;
+    -moz-box-shadow:0 2px 2px 0 rgb(248, 248, 248);
+    -webkit-box-shadow:0 2px 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:0 2px 2px 0 rgba(231, 226, 226, 0.2);
+}
+
+.title-box_register{
+  margin:0 auto;
+  padding-left:5px;
+  font-size:20px;
+  padding:20px 10px 10px;
+}
+
+
+.card_skill{
+  display:inline-block;
+  background-color:#dbdbff;
+  margin:5px;
+	padding-bottom:10px;
+	width:35%;
+  border-radius:5px;
+    -moz-box-shadow:0 2px 2px 0 rgb(248, 248, 248);
+    -webkit-box-shadow:0 2px 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:0 2px 2px 0 rgba(231, 226, 226, 0.2);
+}
+
+.title-box_skill{
+  margin:0 auto;
+  padding-left:5px;
+  font-size:20px;
+  padding:20px 10px 10px;
+}
+
+.card_champ{
+  display:inline-block;
+  background-color:#dbdbff;
+  margin:5px;
+	padding-bottom:10px;
+	width:35%;
+  border-radius:5px;
+    -moz-box-shadow:0 2px 2px 0 rgb(248, 248, 248);
+    -webkit-box-shadow:0 2px 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:0 2px 2px 0 rgba(231, 226, 226, 0.2);
+}
+
+.title-box_champ{
+  margin:0 auto;
+  padding-left:5px;
+  font-size:20px;
+  padding:20px 10px 10px;
+}
+
+
+
+.card{
+  display:inline-block;
+  background-color:#037F8C;
+  margin:5px;
+  padding-bottom:10px;
+  border-radius:5px;
+    -moz-box-shadow:0 2px 2px 0 rgb(248, 248, 248);
+    -webkit-box-shadow:0 2px 2px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:0 2px 2px 0 rgba(231, 226, 226, 0.2);
+}
+
+.image-box,
+.title-box,
+.desc-box,
+.card{
+  width:300px;
+}
+
+.image-box{
+  border-radius:5px 5px 0 0;
+  background-color:#f8f8f8;
+  margin-bottom:-6px;
+  height:120px;
+  background:url("https://placehold.jp/250x120.png") center center /cover no-repeat;
+}
+
+.title-box{
+  margin:0 auto;
+  padding-left:5px;
+  font-size:18px;
+  padding:20px 10px 10px;
+}
+
+.line{
+  height:2px;
+  background:rgb(94, 5, 102);
+  margin-bottom:10px;
+}
+
+.desc-box{
+  padding:0 10px 10px;
+  color:#141414;
+  font-size:35px
+}
+
+.title,.desc{
+	color:#0c0c0c;
+  width:6000px
+}

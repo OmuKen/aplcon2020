@@ -1,0 +1,44 @@
+DBの登録は
+１.社員表(TB_Worker)
+2.スキル表(TB_SKill)
+3.スキル対応表(TB_VsSkill)
+の順番で行う。
+
+実際の登録は、
+
+1.models.pyで定義した、DBの構成を登録する。(次コマンドを実施)
+python manage.py makemigrations
+python manage.py migrate
+
+
+2.DB登録のためにshellを起動する
+python manage.py shell
+
+
+3.shell上で、定義したDBをimportする。
+from manager.models import TB_Worker,TB_Skill,TB_VsSkill
+
+4. 社員表を登録する。
+Ex)
+TB_Worker.objects.create(worker_code=123456, name =‘田中太郎’,dep=‘EF KAI1’,mail=‘sksoak@dmss’)
+
+5.スキル表を登録する。
+Ex)
+TB_Skill.objects.create(skill_code=12, name =‘c言語’)
+
+6.スキル対応表を登録する。
+Ex)
+p=get_object_or_404(TB_Worker, worker_code=123456) #worker_codeは４で登録した社員表のものと合わせる
+s=get_object_or_404(TB_Skill, skill_code=12) #スキルコードはスキル表に登録してある番号にする
+TB_VsSkill.objects.create(worker_code=p, skill_code=s)
+
+
+これで1人分の登録が完了。
+
+
+
+
+
+
+
+

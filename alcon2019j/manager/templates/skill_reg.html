@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body %}
+<div align="left" style="margin : 20px">
+  <font size="5">スキル登録</font>
+</div>
+<form method="get" action="">
+<div align="center" style="margin : 20px">
+  <!-- 検索フォーム -->
+  {{ form.errors.code }}
+    <label>{{ form.code.label }} {{ form.code }}</label>
+  {{ form.errors.name }}
+    <label>{{ form.name.label }} {{ form.name }}</label>
+  </div>
+  <div align="center">
+  <button class="btn btn-success" type="submit">登録</button>
+  </div>
+  </form>
+  
+  <div align="center" style="margin : 20px">
+    {{message}}
+  </div>
+
+{% endblock %}
+
+</html>

@@ -1,0 +1,82 @@
+基本的なフォルダ構成は下記の通り１
+
+|--alcon2019j(ここがマスターディレクトリ)
+| |--__init__.py
+| |--settings.py
+| |--urls.py
+| |--wsgi.py(URLリクエストに対応するViewを探す、HTTPリクエストはここに飛ばす)
+|--manage.py
+|--manager(アプリ本体,アプリケーションディレクトリと呼ばれる。。。はず)
+| |--__init__.py
+| |--admin.py
+| |--apps.py
+| |--migrations
+| | |--__init__.py
+| |--models.py(データベース定義とデータベースの操作を書く)
+| |--tests.py
+| |--views.py(HTMLとデータベースのデータを混ぜるレンダー)
+
+#データベース(models.pyになんか書いたら)をいじったら、下記コマンドを実施しよう
+1.python manage.py makemigrations
+  成功時は次のように表示される
+  Migrations for 'manager':
+  manager/migrations/0001_initial.py
+    - Create model worker
+2.python manage.py migrate
+  成功時は次のように表示される
+　Operations to perform:
+   Apply all migrations: admin, auth, contenttypes, manager, sessions
+　Running migrations:
+   Applying contenttypes.0001_initial... OK
+   Applying auth.0001_initial... OK
+   Applying admin.0001_initial... OK
+   Applying admin.0002_logentry_remove_auto_add... OK
+   Applying admin.0003_logentry_add_action_flag_choices... OK
+   Applying contenttypes.0002_remove_content_type_name... OK
+   Applying auth.0002_alter_permission_name_max_length... OK
+   Applying auth.0003_alter_user_email_max_length... OK
+   Applying auth.0004_alter_user_username_opts... OK
+   Applying auth.0005_alter_user_last_login_null... OK
+   Applying auth.0006_require_contenttypes_0002... OK
+   Applying auth.0007_alter_validators_add_error_messages... OK
+   Applying auth.0008_alter_user_username_max_length... OK
+   Applying auth.0009_alter_user_last_name_max_length... OK
+   Applying auth.0010_alter_group_name_max_length... OK
+   Applying auth.0011_update_proxy_permissions... OK
+   Applying manager.0001_initial... OK
+   Applying sessions.0001_initial... OK
+
+#models.pyで作ったデータベースに登録しよう
+
+1.python manage.py shell
+2.from manager.models import モデル名
+3. モデル名.objects.create(name="名前".format(0),department=worker.EF,mail="omuomu@mail.com")
+成功したらこんな感じで表示されるはず
+Out[7]: <worker: worker object (登録数)>
+
+
+#urls.pyでURLの設定をしよう
+path('woker_list/',manager_view.(view.pyに登録したView名).as_view())//これを書くだけ
+
+#view.pyの設定
+https://qiita.com/gragragrao/items/373057783ba8856124f3を見て適当に書いてください
+
+#サーバーを起動
+python manage.py runserver 8000 
+成功したら
+Quit the server with CONTROL-C.
+と表示される
+
+この状態でwebブラウザにリクエスト投げればtemplete直下に配置したhtmlが表示されるはず
+
+#cssとjsを適当に撮ってくる
+SB Admin 2を使いました(笑)
+
+staticファイル = css,jsとか画像とか
+静的ファイルはWebサーバのドキュメントルート下に配置する。
+ソースコード、実行ファイルはホームディレクトリに配置する。
+Staticファイルはアプリケーションディレクトリの直下に配置するさらにstaticの直下に
+Static/アプリケーション名/という感じでフォルダを作る
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body %}
+
+  <div align="left" style="margin : 20px">
+    <font size="5">スキル検索</font>
+  </div>
+  <!-- 検索フォーム -->
+  <div align="right" style="margin : 5px">
+  <form method="get" action="">
+  {{ form.errors.skill_name }}
+    <label>{{ form.skill_name.label }} {{ form.skill_name }}</label>
+  <button class="btn btn-success" type="submit">検索</button>
+  </form>
+  </div>
+
+   <div align="center" style="margin : 1px">
+  　<font size="5">検索結果 「{{skill_name}}」</font>
+   </div>
+   <table id="worker-table" class="table table-striped" style="width:100%" cellspacing="0"　>
+   <caption>{{message}}</caption>
+      <thead class="thead-dark">
+        <tr>
+          <th bgcolor=#6495ed >社員コード</th>
+          <th bgcolor=#6495ed>名前</th>
+          <th bgcolor=#6495ed>所属</th>
+          <th bgcolor=#6495ed>mail</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for worker in select_worker %}
+        <tr>
+          <td>{{worker.worker_code.worker_code}}</td>
+          <td>{{worker.worker_code.name}}</td>
+          <td>{{worker.worker_code.dep}}</td>
+          <td>{{worker.worker_code.mail}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+{% endblock %}
+
+</html>

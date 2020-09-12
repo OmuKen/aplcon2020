@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--
+  {% load static %}
+
+  <title>Worker List</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/> 
+  <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+　<script>
+        jQuery(function($){
+            $("#foo-table").DataTable();
+        });
+　</script>
+-->
+</head>
+
+<body>
+
+  <!-- 検索フォーム -->
+  <form method="get" action="">
+  {{ form.errors.skill_name }}
+    <label>{{ form.skill_name.label }} {{ form.skill_name }}</label>
+  <input type="submit" value="検索">
+  </form>
+  <section>
+  <table id="foo-table" class="table table-striped" style="width:90%" cellspacing="0">
+  <caption>社員表</caption>
+      <thead class="thead-dark">
+        <tr>
+          <th class="success">社員コード</th>
+          <th class="info">名前</th>
+          <th class="warning">所属</th>
+          <th class="danger">mail</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for worker in select_worker %}
+        <tr>
+          <td>{{worker.worker_code.worker_code}}</td>
+          <td>{{worker.worker_code.name}}</td>
+          <td>{{worker.worker_code.dep}}</td>
+          <td>{{worker.worker_code.mail}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  <div>
+    <a href = "{% url 'worker_list' %}">社員保有スキル検索</a>
+    <div>
+    <a href = "{% url 'worker_reg' %}">社員保有スキル登録</a>
+    <div>
+    <a href = "{% url 'worker_reg' %}">社員登録</a>
+    <div>
+    <a href = "{% url 'skill_reg' %}">スキル登録</a>
+</body>
+
+</html>

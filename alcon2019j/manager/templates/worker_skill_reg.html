@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body %}
+  <div align="left" style="margin : 20px">
+    <font size="5">社員保有スキル登録</font>
+  </div>
+  <!-- 検索フォーム -->
+  <form method="get" action="">
+  <div align="center" style="margin : 20px">
+    {{ form.errors.worker_code }}
+    <label>{{ form.worker_code.label }} {{ form.worker_code }}</label>
+    {{ form.errors.skill_name }}
+    <label>{{ form.skill_name.label }} {{ form.skill_name }}</label>
+  </div>
+  <div align="center">
+    <button class="btn btn-success" type="submit">登録</button>
+  </div>
+  </form>
+   
+  <div align="center" style="margin : 20px">
+    {{message}}
+  </div>
+
+{% endblock %}
+
+</html>
