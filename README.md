@@ -9,6 +9,7 @@
 
 ## Env
 Pythonパッケージの共有は"requirements.txt"で管理がよさそう
+
 ・パッケージ一覧出力
 ```sh
 pip freeze > requirements.txt
