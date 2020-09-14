@@ -8,6 +8,16 @@
 * Takudon3
 
 ## Env
+Pythonパッケージの共有は"requirements.txt"で管理がよさそう
+・パッケージ一覧出力
+```sh
+pip freeze > requirements.txt
+```
+・requirements.txtからパッケージ読み出し⇒インストール
+```sh
+pip install -r requirements.txt
+```
+
 asgiref    3.2.10
 Django     3.1.1
 pip        20.1.1
