@@ -5,13 +5,13 @@
 2.SSM設定⇒コンソール上から接続  
 3.sudo  
 
-'''sh
+```sh
 sudo su -
-'''
+```
 
 4.python環境作成
 
-'''sh
+```sh
 # python (EC2独自コマンド)
 sudo amazon-linux-extras install python3.8 //Version3.8.5がインストールされる
 
@@ -24,7 +24,7 @@ virtualenv -p python3.8 env-django
 # Activate
 cd env-django
 source ./bin/activate
-'''
+```
 
 5.gitインストール/クローン
 
