@@ -1,4 +1,17 @@
 # Djangoデプロイ
+AWS EC2 + Django + nginxで環境構築⇒パブリックにデプロイする
+
+## （追記）厳しそう。。。
+Djangoでデフォルト利用されているDBエンジン（SQlite3）とEC2の互換性が非常に悪い。  
+ので、代替案でお試し中。  
+
+* DBを変更  
+DBエンジンをSQlite3⇒PostgleSQLに変更  
+Backendが変更されるため、ソースコードに影響なし  
+ 参考⇒https://qiita.com/pokotsun/items/1272479e36c5146c6609
+
+Djangoのダウングレード（Version3.1.1⇒2.1.0）も考えたが、ソースに影響が出そうなので却下。  
+以上
 
 ## package Verisinon
 nginx==1.18.0
